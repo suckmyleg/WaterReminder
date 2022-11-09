@@ -25,14 +25,14 @@ function main_water(){
     
     nextSip = getNextSip();
 
-    console.log(nextSip, secondsFromNow());
+    //console.log(nextSip, secondsFromNow());
 
     if(getNextSip() <= secondsFromNow()){
         takeSip();
         save_data_local(secondsFromNow(), "nextSip")
     }
 
-    setTimeout(() => { main_water(); }, 500);
+    setTimeout(() => { main_water(); }, 2000);
 }
 
 function getNextSip() {
